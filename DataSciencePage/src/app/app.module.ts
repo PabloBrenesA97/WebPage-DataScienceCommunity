@@ -11,13 +11,17 @@ import { SharedModule } from './components/shared/shared.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 import { HttpClientModule } from '@angular/common/http';
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ViewGistComponent } from './components/view-gist/view-gist.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProjectsComponent,
     PagenotfoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    ViewGistComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     HttpClientModule,
     NgxGistModule,
+    Ng2SearchPipeModule,
     BrowserAnimationsModule
   ],
   providers: [],

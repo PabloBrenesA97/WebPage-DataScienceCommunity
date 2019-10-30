@@ -7,7 +7,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
+  searchText;
   userNameGist = "PabloBrenesA97";
   constructor(
     public projectsService: ProjectsService
@@ -16,6 +16,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     if(!this.projectsService.gists)
       this.projectsService.getAllGistIds(this.userNameGist);
+
       //TODO: Extraer los nombres de los gist
   }
 
